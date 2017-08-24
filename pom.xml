@@ -8,8 +8,8 @@
   
   <repositories>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
     </repositories>
     <licenses>
@@ -34,15 +34,16 @@
             </resource>
         </resources>
         <finalName>${project.name}-${project.version}</finalName>
+      <defaultGoal>clean package</defaultGoal>
   </build>
   
   <dependencies>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.6.2-R0.1</version>
-            <type>jar</type>
-        </dependency>
+      <dependency>
+          <groupId>org.spigotmc</groupId>
+          <artifactId>spigot-api</artifactId>
+          <version>1.12.1-R0.1-SNAPSHOT</version>
+          <scope>provided</scope>
+      </dependency>
     </dependencies>
 
   <properties>
